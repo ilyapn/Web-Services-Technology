@@ -6,7 +6,7 @@ import wst.database.entities.People;
 
 import java.util.List;
 
-public interface PeopleRepository extends CrudRepository<People, Long> {
+public interface PeopleRepository extends CrudRepository<People, Integer> {
 
     @Query("SELECT p " +
             "FROM People p " +

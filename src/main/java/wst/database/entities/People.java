@@ -6,19 +6,19 @@ import javax.persistence.*;
 @Entity
 public class People {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue
+    private Integer id;
     private String surname;
     private String name;
     private String patronymic;
     private Integer age;
     private Integer weight;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -65,7 +65,8 @@ public class People {
     @Override
     public String toString() {
         return "People{" +
-                "surname='" + surname + '\'' +
+                "id='" + id + '\'' +
+                ",surname='" + surname + '\'' +
                 ", name='" + name + '\'' +
                 ", patronymic='" + patronymic + '\'' +
                 ", age=" + age +
