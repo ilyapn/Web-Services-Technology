@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>Web-Services-Technology</groupId>
-	<artifactId>lab1</artifactId>
+	<artifactId>WSTServer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>lab1</name>
 	<description>Demo project for Spring Boot</description>
