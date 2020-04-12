@@ -35,6 +35,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Image }
+     * 
+     */
+    public Image createImage() {
+        return new Image();
+    }
+
+    /**
      * Create an instance of {@link FindFault }
      * 
      */

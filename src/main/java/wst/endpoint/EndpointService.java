@@ -8,6 +8,11 @@ import wst.generated.*;
 
 import javax.jws.WebService;
 import javax.xml.ws.Holder;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -87,5 +92,17 @@ public class EndpointService implements DB {
             throw new UpdateFault(wolf);
         }
         return 0;
+    }
+
+    @Override
+    public Image image(String string) {
+        Image image = new Image();
+        try {
+            File file = new File("src/main/resources/forest.jpg");
+            image.setImg(Files.readAllBytes(file.toPath()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return image;
     }
 }
