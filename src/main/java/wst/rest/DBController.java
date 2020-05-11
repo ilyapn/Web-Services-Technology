@@ -18,7 +18,7 @@ public class DBController {
         this.peopleService = peopleService;
     }
 
-    @RequestMapping(value = "/find", method = RequestMethod.POST)
+    @RequestMapping(value = "/find", method = RequestMethod.GET)
     public List<People> find(
             @RequestParam(name = "name", required = false) String name,
             @RequestParam(name = "surname", required = false) String surname,
